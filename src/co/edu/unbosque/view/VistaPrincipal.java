@@ -9,6 +9,7 @@ public class VistaPrincipal extends JFrame{
 	
 	private PanelTablero pTablero;
 	private PanelHistorial pHistorial;
+	private PanelMenu pMenu;
 	
 	public VistaPrincipal() {
 		setTitle("Cuatriqui");
@@ -30,6 +31,9 @@ public class VistaPrincipal extends JFrame{
 		
 		pHistorial = new PanelHistorial();
 		getContentPane().add(pHistorial, BorderLayout.EAST);
+		
+		pMenu = new PanelMenu();
+		getContentPane().add(pMenu, BorderLayout.NORTH);
 	}
 
 	public PanelTablero getpTablero() {
@@ -38,6 +42,22 @@ public class VistaPrincipal extends JFrame{
 
 	public void setpTablero(PanelTablero pTablero) {
 		this.pTablero = pTablero;
+	}
+
+	public PanelHistorial getpHistorial() {
+		return pHistorial;
+	}
+
+	public void setpHistorial(PanelHistorial pHistorial) {
+		this.pHistorial = pHistorial;
+	}
+
+	public PanelMenu getpMenu() {
+		return pMenu;
+	}
+
+	public void setpMenu(PanelMenu pMenu) {
+		this.pMenu = pMenu;
 	}
 
 }

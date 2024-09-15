@@ -29,5 +29,4 @@ public class Controller {
 		tablero.cambiarColor(fila, columna, color);
 		ventana.getpTablero().cambiarColor(fila, columna, color);
 	}
-	
 }
