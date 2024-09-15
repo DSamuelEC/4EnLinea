@@ -14,7 +14,6 @@ public class VistaVentanaEmergente {
 	
 	public String leerDatoString(String mensaje) {
 		String aux = JOptionPane.showInputDialog(mensaje);
-		//String nombre = String.parseDouble(aux);
 		System.out.println("soy el emergente " + mensaje + aux);
 		return aux;
 	}
