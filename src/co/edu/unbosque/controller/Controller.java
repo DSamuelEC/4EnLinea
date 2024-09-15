@@ -19,6 +19,7 @@ public class Controller {
 		this.ventana = new VistaPrincipal();
 		this.tablero = new Tablero();
 		this.turno = "rojo"; // El juego empieza con el turno del rojo
+		asignarOyentes();
 	}
 
 	public void asignarOyentes() {
