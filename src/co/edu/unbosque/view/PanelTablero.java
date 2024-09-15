@@ -28,7 +28,7 @@ public class PanelTablero extends JPanel {
             for (int j = 0; j < 4; j++) {
                 matrizJL[i][j] = new JLabel("");
                 matrizJL[i][j].setOpaque(true); // Para poder cambiar el fondo de color
-                matrizJL[i][j].setBorder(BorderFactory.createLineBorder(Color.WHITE));
+                matrizJL[i][j].setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 matrizJL[i][j].setBackground(Color.WHITE);
                 final int fila = i;
                 final int columna = j;
