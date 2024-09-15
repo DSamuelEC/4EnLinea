@@ -56,6 +56,7 @@ public class PanelTablero extends JPanel {
             default:
                 break;
         }
+        matrizJL[fila][columna].repaint();
     }
 
     public void setTableroListener(TableroListener listener) {
