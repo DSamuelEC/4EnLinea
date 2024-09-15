@@ -12,10 +12,16 @@ public class Tablero {
 	public void inicializarComponentes() {
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
-				matriz[i][j] = "o" ;
+				matriz[i][j] = "-" ;
 			}
 		}
-		System.out.println(matriz);
+		System.out.println(matriz.toString());
+	}
+	
+	public String mostrarMatriz() {
+		
+		
+		return "";
 	}
 
 	public void cambiarColor(int fila, int columna, String color) {

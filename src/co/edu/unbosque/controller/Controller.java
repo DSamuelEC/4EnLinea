@@ -53,7 +53,7 @@ public class Controller {
 	}
 
 	public void manejarClicEnCelda(int fila, int columna) {
-		if (tablero.getMatriz()[fila][columna] == null) {
+		if (tablero.getMatriz()[fila][columna] == "-") {
 			cambiarColor(fila, columna, turno);
 			registrarMovimiento(fila, columna, turno);
 			cambiarTurno();
