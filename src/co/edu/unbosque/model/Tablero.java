@@ -6,7 +6,6 @@ public class Tablero {
 
 	public Tablero() {
 		matriz = new String[4][4];
-		// inicializarComponentes();
 	}
 
 	public void cambiarColor(int fila, int columna, String color) {
