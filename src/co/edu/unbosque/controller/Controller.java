@@ -4,6 +4,8 @@ import co.edu.unbosque.model.Tablero;
 import co.edu.unbosque.view.VistaPrincipal;
 import co.edu.unbosque.view.VistaVentanaEmergente;
 import co.edu.unbosque.view.PanelTablero.TableroListener;
+import co.edu.unbosque.view.VistaConsola;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,12 +14,14 @@ public class Controller {
 	private VistaPrincipal ventana;
 	private Tablero tablero;
 	private VistaVentanaEmergente emergente;
+	private VistaConsola consola;
 	private String turno;
 
 	public Controller() {
 		this.emergente = new VistaVentanaEmergente();
 		this.ventana = new VistaPrincipal();
 		this.tablero = new Tablero();
+		this.consola = new VistaConsola();
 		this.turno = "rojo"; // El juego empieza con el turno del rojo
 		asignarOyentes();
 	}
@@ -53,13 +57,14 @@ public class Controller {
 	}
 
 	public void manejarClicEnCelda(int fila, int columna) {
-		if (tablero.getMatriz()[fila][columna] == "-") {
+		if (tablero.getMatriz()[fila][columna] == null) {
 			cambiarColor(fila, columna, turno);
 			registrarMovimiento(fila, columna, turno);
 			cambiarTurno();
 		} else {
 			emergente.mostrarInformacion("La celda ya está ocupada.");
 		}
+		consola.mostrarInformacion(tablero.mostrarMatriz());
 	}
 
 	public void cambiarColor(int fila, int columna, String color) {

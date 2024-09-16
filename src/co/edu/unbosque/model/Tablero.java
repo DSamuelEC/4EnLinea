@@ -6,26 +6,32 @@ public class Tablero {
 
 	public Tablero() {
 		matriz = new String[4][4];
-		inicializarComponentes();
+		// inicializarComponentes();
 	}
 
+//quizas no se use este metodo
 	public void inicializarComponentes() {
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
-				matriz[i][j] = "-" ;
+				matriz[i][j] = "-";
 			}
 		}
-		System.out.println(matriz.toString());
-	}
-	
-	public String mostrarMatriz() {
-		
-		
-		return "";
 	}
 
 	public void cambiarColor(int fila, int columna, String color) {
 		matriz[fila][columna] = color;
+	}
+
+	public String mostrarMatriz() {
+		StringBuilder aux = new StringBuilder();
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				aux.append(matriz[i][j] == null ? "-" : matriz[i][j]);
+				aux.append(" ");
+			}
+			aux.append("\n");
+		}
+		return aux.toString();
 	}
 
 	public String[][] getMatriz() {
