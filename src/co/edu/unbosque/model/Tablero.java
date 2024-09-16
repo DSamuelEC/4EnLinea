@@ -9,15 +9,6 @@ public class Tablero {
 		// inicializarComponentes();
 	}
 
-//quizas no se use este metodo
-	public void inicializarComponentes() {
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				matriz[i][j] = "-";
-			}
-		}
-	}
-
 	public void cambiarColor(int fila, int columna, String color) {
 		matriz[fila][columna] = color;
 	}
