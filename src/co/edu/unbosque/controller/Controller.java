@@ -16,6 +16,7 @@ public class Controller {
 	private VistaVentanaEmergente emergente;
 	private VistaConsola consola;
 	private String turno;
+	private String movimientosPartida;
 
 	public Controller() {
 		this.emergente = new VistaVentanaEmergente();
@@ -23,6 +24,7 @@ public class Controller {
 		this.tablero = new Tablero();
 		this.consola = new VistaConsola();
 		this.turno = "rojo"; // El juego empieza con el turno del rojo
+		movimientosPartida = "";
 		asignarOyentes();
 	}
 
@@ -66,6 +68,10 @@ public class Controller {
 		}
 		consola.mostrarInformacion(tablero.mostrarMatriz());
 	}
+	
+	public void victoria() {
+		tablero.actualizarHistorial(movimientosPartida);
+	}
 
 	public void cambiarColor(int fila, int columna, String color) {
 		tablero.cambiarColor(fila, columna, color);
@@ -74,7 +80,12 @@ public class Controller {
 
 	public void registrarMovimiento(int fila, int columna, String color) {
 		String movimiento = "Fila: " + fila + ", Columna: " + columna + ", Color: " + color;
+		movimientosPartida += movimiento + ", ";
+		System.out.println(movimientosPartida);
 		ventana.getpHistorial().añadirMovimientos(movimiento);
+		tablero.actualizarHistorial("Prueba 1");
+		tablero.actualizarHistorial("Prueba 2");
+		tablero.actualizarHistorial(movimientosPartida);
 	}
 
 	public void cambiarTurno() {

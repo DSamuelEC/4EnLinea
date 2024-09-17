@@ -14,10 +14,6 @@ public class Archivo {
 		f = new File("archivos\\Historial.txt");
 	}
 
-	public Archivo(File f) {
-		this.f = f;
-	}
-
 	public String leerArchivo() {
 		FileInputStream fis;
 		InputStreamReader isr;
@@ -48,9 +44,9 @@ public class Archivo {
 
 	public String escribirArchivo(String frase) {
 		try {
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader linea = new BufferedReader(isr);
-			FileWriter lineatx = new FileWriter(f);
+			//InputStreamReader isr = new InputStreamReader(System.in);
+			//BufferedReader linea = new BufferedReader(isr);
+			FileWriter lineatx = new FileWriter(f, true);
 			String linea_arch = frase;
 			lineatx.write(linea_arch + "\r\n");
 			lineatx.close();

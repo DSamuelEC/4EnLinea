@@ -1,0 +1,12 @@
+Prueba 1
+Prueba 2
+Fila: 0, Columna: 0, Color: rojo, 
+Prueba 1
+Prueba 2
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, 
+Prueba 1
+Prueba 2
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 0, Columna: 2, Color: rojo, 
+Prueba 1
+Prueba 2
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 0, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, 

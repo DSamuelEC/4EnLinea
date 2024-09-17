@@ -1,11 +1,26 @@
 package co.edu.unbosque.model;
 
+import co.edu.unbosque.model.persistence.Archivo;
+
 public class Tablero {
 
 	private String[][] matriz;
+	private String historialArch;
+	Archivo arch;
 
 	public Tablero() {
 		matriz = new String[4][4];
+		arch = new Archivo();
+		historialArch = "";
+	}
+	
+	public String leerHistorial() {
+		historialArch = arch.leerArchivo();
+		return historialArch;
+	}
+
+	public String actualizarHistorial(String partida) {
+		return arch.escribirArchivo(partida);
 	}
 
 	public void cambiarColor(int fila, int columna, String color) {
