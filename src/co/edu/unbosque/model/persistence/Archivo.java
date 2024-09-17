@@ -54,6 +54,5 @@ public class Archivo {
 		} catch (IOException e) {
 			return "No se pudo escribir en el archivo";
 		}
-
 	}
 }

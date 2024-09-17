@@ -41,8 +41,6 @@ public class Controller {
         ventana.getpMenu().getBtnNuevaPartida().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	ventana.setVisible(false);
-            	Controller c = new Controller();
                 iniciarNuevaPartida();
             }
         });
@@ -93,18 +91,7 @@ public class Controller {
     }
 
     public void iniciarNuevaPartida() {
-        // Almacenar la partida actual con un título diferenciador
-        String tituloPartida = "Partida " + contadorPartidas;
-        tablero.actualizarHistorial("\n" + tituloPartida + "\n" + movimientosPartida);
-        contadorPartidas++;
-        
-        // Reiniciar el tablero y la matriz
-        tablero = new Tablero();
-        ventana.getpTablero().removeAll();
-        ventana.getpTablero().inicializarComponentes();
-        ventana.getpHistorial().añadirMovimientos("Nueva partida iniciada");
-        turno = "rojo";
-        movimientosPartida = "";
+       emergente.mostrarInformacion("Funcion NO añadida aun");
     }
 
     public void mostrarHistorial() {
