@@ -17,6 +17,7 @@ public class Controller {
     private VistaConsola consola;
     private String turno;
     private String movimientosPartida;
+    private int contadorPartidas;
 
     public Controller() {
         this.emergente = new VistaVentanaEmergente();
@@ -24,7 +25,8 @@ public class Controller {
         this.tablero = new Tablero();
         this.consola = new VistaConsola();
         this.turno = "rojo"; // El juego empieza con el turno del rojo
-        movimientosPartida = "";
+        this.movimientosPartida = "";
+        this.contadorPartidas = 1;
         asignarOyentes();
     }
 
@@ -46,7 +48,7 @@ public class Controller {
         ventana.getpMenu().getBtnCargarHistorial().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mostrarHistorial();
+                //mostrarHistorial();
             }
         });
     }
@@ -90,15 +92,23 @@ public class Controller {
     }
 
     public void iniciarNuevaPartida() {
+        // Almacenar la partida actual con un título diferenciador
+        String tituloPartida = "Partida " + contadorPartidas;
+        tablero.actualizarHistorial("\n" + tituloPartida + "\n" + movimientosPartida);
+        contadorPartidas++;
+        
+        // Reiniciar el tablero y la matriz
         tablero = new Tablero();
         ventana.getpTablero().removeAll();
         ventana.getpTablero().inicializarComponentes();
         ventana.getpHistorial().añadirMovimientos("Nueva partida iniciada");
         turno = "rojo";
+        movimientosPartida = "";
     }
 
-    public void mostrarHistorial() {
+    /*public void mostrarHistorial() {
         String historial = tablero.leerHistorial();
-        emergente.mostrarInformacion(historial);
-    }
+        VistaVentanaEmergente historialEmergente = new VistaVentanaEmergente(ventana, historial);
+        historialEmergente.setVisible(true);
+    }*/
 }

@@ -99,3 +99,25 @@ Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Col
 Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, 
 Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
 Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+
+Partida 1
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
+
+Partida 1
+Fila: 0, Columna: 0, Color: rojo, Fila: 0, Columna: 1, Color: azul, Fila: 1, Columna: 1, Color: rojo, Fila: 0, Columna: 2, Color: azul, Fila: 2, Columna: 2, Color: rojo, Fila: 0, Columna: 3, Color: azul, Fila: 3, Columna: 3, Color: rojo, 
