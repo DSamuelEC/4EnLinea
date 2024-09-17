@@ -11,7 +11,7 @@ import javax.swing.border.TitledBorder;
 public class PanelMenu extends JPanel {
 
 	private JTextField txtNombre1, txtNombre2, txtVS;
-	private JButton btnNuevaPartida, btnCambioJugador, btnCargarHistorial;
+	private JButton btnNuevaPartida, btnCargarHistorial;
 
 	public PanelMenu() {
 		setLayout(new GridLayout(2, 3));
@@ -36,17 +36,13 @@ public class PanelMenu extends JPanel {
 		txtNombre2.setEditable(false);
 		add(txtNombre2);
 
-		btnNuevaPartida = new JButton("Iniciar");
-		btnNuevaPartida.setActionCommand("INICIAR PARTIDA");
-		add(btnNuevaPartida);
+		btnNuevaPartida = new JButton("Iniciar Partida");
+	    btnNuevaPartida.setActionCommand("INICIAR PARTIDA");
+	    add(btnNuevaPartida);
 
-		btnCambioJugador = new JButton("Cambio");
-		btnCambioJugador.setActionCommand("CAMBIAR DE JUGADOR");
-		add(btnCambioJugador);
-
-		btnCargarHistorial = new JButton("Cargar");
-		btnCargarHistorial.setActionCommand("CARGAR PARTIDAS");
-		add(btnCargarHistorial);
+	    btnCargarHistorial = new JButton("Historial");
+	    btnCargarHistorial.setActionCommand("CARGAR HISTORIAL");
+	    add(btnCargarHistorial);
 	}
 
 	public JTextField getTxtNombre1() {
@@ -81,14 +77,6 @@ public class PanelMenu extends JPanel {
 		this.btnNuevaPartida = btnNuevaPartida;
 	}
 
-	public JButton getBtnCambioJugador() {
-		return btnCambioJugador;
-	}
-
-	public void setBtnCambioJugador(JButton btnCambioJugador) {
-		this.btnCambioJugador = btnCambioJugador;
-	}
-
 	public JButton getBtnCargarHistorial() {
 		return btnCargarHistorial;
 	}
@@ -96,4 +84,6 @@ public class PanelMenu extends JPanel {
 	public void setBtnCargarHistorial(JButton btnCargarHistorial) {
 		this.btnCargarHistorial = btnCargarHistorial;
 	}
+
+	
 }

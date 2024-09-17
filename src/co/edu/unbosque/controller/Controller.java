@@ -11,106 +11,94 @@ import java.awt.event.ActionListener;
 
 public class Controller {
 
-	private VistaPrincipal ventana;
-	private Tablero tablero;
-	private VistaVentanaEmergente emergente;
-	private VistaConsola consola;
-	private String turno;
-	private String movimientosPartida;
+    private VistaPrincipal ventana;
+    private Tablero tablero;
+    private VistaVentanaEmergente emergente;
+    private VistaConsola consola;
+    private String turno;
+    private String movimientosPartida;
 
-	public Controller() {
-		this.emergente = new VistaVentanaEmergente();
-		this.ventana = new VistaPrincipal();
-		this.tablero = new Tablero();
-		this.consola = new VistaConsola();
-		this.turno = "rojo"; // El juego empieza con el turno del rojo
-		movimientosPartida = "";
-		asignarOyentes();
-	}
+    public Controller() {
+        this.emergente = new VistaVentanaEmergente();
+        this.ventana = new VistaPrincipal();
+        this.tablero = new Tablero();
+        this.consola = new VistaConsola();
+        this.turno = "rojo"; // El juego empieza con el turno del rojo
+        movimientosPartida = "";
+        asignarOyentes();
+    }
 
-	public void asignarOyentes() {
-		ventana.getpTablero().setTableroListener(new TableroListener() {
-			@Override
-			public void celdaClickeada(int fila, int columna) {
-				manejarClicEnCelda(fila, columna);
-			}
-		});
+    public void asignarOyentes() {
+        ventana.getpTablero().setTableroListener(new TableroListener() {
+            @Override
+            public void celdaClickeada(int fila, int columna) {
+                manejarClicEnCelda(fila, columna);
+            }
+        });
 
-		ventana.getpMenu().getBtnNuevaPartida().addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				iniciarNuevaPartida();
-			}
-		});
+        ventana.getpMenu().getBtnNuevaPartida().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                iniciarNuevaPartida();
+            }
+        });
 
-		ventana.getpMenu().getBtnCambioJugador().addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				cambiarJugador();
-			}
-		});
+        ventana.getpMenu().getBtnCargarHistorial().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mostrarHistorial();
+            }
+        });
+    }
 
-		ventana.getpMenu().getBtnCargarHistorial().addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				cargarHistorial();
-			}
-		});
-	}
+    public void manejarClicEnCelda(int fila, int columna) {
+        if (tablero.getMatriz()[fila][columna] == null) {
+            cambiarColor(fila, columna, turno);
+            registrarMovimiento(fila, columna, turno);
+            String ganador = tablero.verificarGanador();
+            if (ganador != null) {
+                emergente.mostrarInformacion("¡El ganador es " + ganador + "!");
+                victoria();
+            } else {
+                cambiarTurno();
+            }
+        } else {
+            emergente.mostrarInformacion("La celda ya está ocupada.");
+        }
+        consola.mostrarInformacion(tablero.mostrarMatriz());
+    }
 
-	public void manejarClicEnCelda(int fila, int columna) {
-		if (tablero.getMatriz()[fila][columna] == null) {
-			cambiarColor(fila, columna, turno);
-			registrarMovimiento(fila, columna, turno);
-			cambiarTurno();
-		} else {
-			emergente.mostrarInformacion("La celda ya está ocupada.");
-		}
-		consola.mostrarInformacion(tablero.mostrarMatriz());
-	}
-	
-	public void victoria() {
-		tablero.actualizarHistorial(movimientosPartida);
-	}
+    public void victoria() {
+        tablero.actualizarHistorial(movimientosPartida);
+    }
 
-	public void cambiarColor(int fila, int columna, String color) {
-		tablero.cambiarColor(fila, columna, color);
-		ventana.getpTablero().cambiarColor(fila, columna, color);
-	}
+    public void cambiarColor(int fila, int columna, String color) {
+        tablero.cambiarColor(fila, columna, color);
+        ventana.getpTablero().cambiarColor(fila, columna, color);
+    }
 
-	public void registrarMovimiento(int fila, int columna, String color) {
-		String movimiento = "Fila: " + fila + ", Columna: " + columna + ", Color: " + color;
-		movimientosPartida += movimiento + ", ";
-		System.out.println(movimientosPartida);
-		ventana.getpHistorial().añadirMovimientos(movimiento);
-		tablero.actualizarHistorial("Prueba 1");
-		tablero.actualizarHistorial("Prueba 2");
-		tablero.actualizarHistorial(movimientosPartida);
-	}
+    public void registrarMovimiento(int fila, int columna, String color) {
+        String movimiento = "Fila: " + fila + ", Columna: " + columna + ", Color: " + color;
+        movimientosPartida += movimiento + ", ";
+        System.out.println(movimientosPartida);
+        ventana.getpHistorial().añadirMovimientos(movimiento);
+        tablero.actualizarHistorial(movimientosPartida);
+    }
 
-	public void cambiarTurno() {
-		turno = turno.equals("rojo") ? "azul" : "rojo";
-	}
+    public void cambiarTurno() {
+        turno = turno.equals("rojo") ? "azul" : "rojo";
+    }
 
-	public void iniciarNuevaPartida() {
-		tablero = new Tablero();
-		ventana.getpTablero().removeAll();
-		ventana.getpTablero().inicializarComponentes();
-		ventana.getpHistorial().añadirMovimientos("Nueva partida iniciada");
-		turno = "rojo";
-	}
+    public void iniciarNuevaPartida() {
+        tablero = new Tablero();
+        ventana.getpTablero().removeAll();
+        ventana.getpTablero().inicializarComponentes();
+        ventana.getpHistorial().añadirMovimientos("Nueva partida iniciada");
+        turno = "rojo";
+    }
 
-	public void cambiarJugador() {
-		String jugador1 = ventana.getpMenu().getTxtNombre1().getText();
-		String jugador2 = ventana.getpMenu().getTxtNombre2().getText();
-		ventana.getpMenu().getTxtNombre1().setText(jugador2);
-		ventana.getpMenu().getTxtNombre2().setText(jugador1);
-		ventana.getpHistorial().añadirMovimientos("Cambio de jugadores: " + jugador1 + " y " + jugador2);
-	}
-
-	public void cargarHistorial() {
-		// Aquí puedes implementar la lógica para cargar el historial desde un archivo o
-		// base de datos
-		emergente.mostrarInformacion("Funcionalidad de cargar historial no implementada.");
-	}
+    public void mostrarHistorial() {
+        String historial = tablero.leerHistorial();
+        emergente.mostrarInformacion(historial);
+    }
 }
