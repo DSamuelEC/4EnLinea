@@ -41,6 +41,8 @@ public class Controller {
         ventana.getpMenu().getBtnNuevaPartida().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	ventana.setVisible(false);
+            	Controller c = new Controller();
                 iniciarNuevaPartida();
             }
         });
