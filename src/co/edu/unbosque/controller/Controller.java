@@ -50,7 +50,7 @@ public class Controller {
         ventana.getpMenu().getBtnCargarHistorial().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //mostrarHistorial();
+                mostrarHistorial();
             }
         });
     }
@@ -74,6 +74,7 @@ public class Controller {
 
     public void victoria() {
         tablero.actualizarHistorial(movimientosPartida);
+        System.out.println(movimientosPartida);
     }
 
     public void cambiarColor(int fila, int columna, String color) {
@@ -83,10 +84,8 @@ public class Controller {
 
     public void registrarMovimiento(int fila, int columna, String color) {
         String movimiento = "Fila: " + fila + ", Columna: " + columna + ", Color: " + color;
-        movimientosPartida += movimiento + ", ";
-        System.out.println(movimientosPartida);
+        movimientosPartida += movimiento + "; ";
         ventana.getpHistorial().añadirMovimientos(movimiento);
-        tablero.actualizarHistorial(movimientosPartida);
     }
 
     public void cambiarTurno() {
@@ -108,9 +107,9 @@ public class Controller {
         movimientosPartida = "";
     }
 
-    /*public void mostrarHistorial() {
-        String historial = tablero.leerHistorial();
-        VistaVentanaEmergente historialEmergente = new VistaVentanaEmergente(ventana, historial);
-        historialEmergente.setVisible(true);
-    }*/
+    public void mostrarHistorial() {
+    	String aux = tablero.leerHistorial();
+    	
+        //ventana.getpHistorial().cargarHistorial();;
+    }
 }
