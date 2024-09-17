@@ -108,8 +108,8 @@ public class Controller {
     }
 
     public void mostrarHistorial() {
-    	String aux = tablero.leerHistorial();
-    	
-        //ventana.getpHistorial().cargarHistorial();;
+    	String[] aux = tablero.leerHistorial().split("; ");
+    	System.out.println(aux);
+        ventana.getpHistorial().cargarHistorial(aux);;
     }
 }
